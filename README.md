@@ -1,4 +1,4 @@
-# js-hindi-youtube
+# js-hindi-youtube, backend-series-hindi-youtube
 
 A code repo for javascript series at Chai aur code youtube channel
 
