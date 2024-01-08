@@ -1,7 +1,8 @@
 const score = 400;
-// console.log(score);
+// console.log(typeof score);
 
 const balance = new Number(100);
+// console.log(balance);
 // console.log(typeof balance);
 
 // console.log(balance.toString().length);
@@ -13,6 +14,7 @@ const otherNumber = 23.8966;
 
 const hundreds = 1000000;
 // console.log(hundreds.toLocaleString());
+// console.log(hundreds.toLocaleString("en-UK"));
 // console.log(hundreds.toLocaleString("en-IN"));
 
 // Number.MAX_VALUE
@@ -55,7 +57,7 @@ const max = 20;
 // console.log(Math.random() * (max - min + 1) + min);
 // console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
-//------------------------------------
+///------------------------------------ can ignore below
 
 let ranNum = Math.random() * max; // step1
 

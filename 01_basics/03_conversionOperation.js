@@ -99,3 +99,6 @@ let x2 = 3n;
 const y2 = x2++;
 console.log(`value of x2: ${x2}, it's type is: ${typeof x2}`);
 console.log(`value of y2: ${y2}, it's type is: ${typeof y2}`);
+
+
+///Bitwise opaerators : can be useful in scenarios where you need to work with individual bits of binary representations, such as optimizing certain algorithms or dealing with low-level operations. However, they might not be commonly used in everyday JavaScript programming.

@@ -26,3 +26,6 @@ console.log(4 || 0); /// go deeper into || operator , truthy & falsy
 // console.log(4 && 0)
 // console.log(0 || 4)
 console.log(0 && 4); ///find why this opartion evaluates 0
+
+///Ternary
+// (condition: boolean result) ? (boolean true: code) : (boolean false: code)
