@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    //an func tast to be exicuted by timeout func
+    const sayHitesh = function () {
+      console.log("Hitesh");
+    };
+
+    //an func tast to be exicuted by timeout func
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "best js series";
+    };
+
+    //clicking on stop button will stop timeout func using clearTimeout
+    const changeIt = setTimeout(changeText, 1500);
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(changeIt);
+      console.log("stoped");
+    });
+  </script>
+</html>

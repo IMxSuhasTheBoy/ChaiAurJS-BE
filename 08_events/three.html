@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async</title>
+  </head>
+  <body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = (str) => {
+      console.log(str, Date.now());
+    };
+    const printIt = setInterval(sayDate, 2000, "hi");
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(printIt);
+    });
+
+    document.querySelector("#start").addEventListener("click", () => {});
+
+    // how can i rerun the printIt
+  </script>
+</html>
