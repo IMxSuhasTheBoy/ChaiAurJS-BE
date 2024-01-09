@@ -61,10 +61,10 @@ let str2 = " hitesh";
 let str3 = str1 + str2;
 // console.log(str3);
 
-// console.log("1" + 2); ///type coercion => automatic/implicit conversion of values.
-// console.log(1 + "2"); ///type coercion
-// console.log("1" + 2 + 2); ///type coercion
-// console.log(1 + 2 + "2"); ///type coercion, conversion from Number to String, String to Number, Boolean to Number etc
+// console.log("1" + 2); ///type interconversion => automatic/implicit conversion of values.
+// console.log(1 + "2"); ///type interconversion
+// console.log("1" + 2 + 2); ///type interconversion
+// console.log(1 + 2 + "2"); ///type interconversion, while subtracting, adding operations coercian undergoes as follows conversion from Number to String, String to Number, Boolean to Number etc
 
 /// *********************** Operator Precedence | (BODMAS rule)-fundamental concept ***********************
 ///Brackets, Orders, Division, Multiplication, Addition, and Subtraction ||| (in case multiple power operators in exp. solve them RHS -> LHS)

@@ -1,29 +1,31 @@
-// if
-// const isUserloggedIn = true
-// const temperature = 41
+/// if
 
-// if ( temperature === 40 ){
-//     console.log("less than 50");
-// } else {
-//     console.log("temperature is greater than 50");
-// }       
+const isUserloggedIn = true
+const temperature = 65
 
-// console.log("Execute");
+if ( temperature < 50 ){
+    console.log("less than 50");
+} else {
+    console.log("temperature is greater than 50");
+}       
+
+
+// console.log("Execute");try following checks in the above if else code
 // <, >, <=, >=, ==, !=, ===, !==
 
-// const score = 200
+const score = 200
 
 // if (score > 100) {
-//     let power = "fly"
+//     let power = "fly" ///block scoped defined variable
 //     console.log(`User power: ${power}`);
 // }
 
-// console.log(`User power: ${power}`);
+// console.log(`User power: ${power}`); ///trying to access block scoped variable
 
 
 const balance = 1000
 
-// if (balance > 500) console.log("test"),console.log("test2");  // bad practice
+// if (balance > 500) console.log("test"),console.log("test2");  /// bad practice 
 
 // if (balance < 500) {
 //     console.log("less than 500");
@@ -31,17 +33,17 @@ const balance = 1000
 //     console.log("less than 750");
     
 // } else if (balance < 900) {
-//     console.log("less than 750");
+//     console.log("less than 900");
     
 // } else {
 //     console.log("less than 1200");
 
 // }
 
-// const userLoggedIn = true
-// const debitCard = true
-// const loggedInFromGoogle = false
-// const loggedInFromEmail = true
+const userLoggedIn = true
+const debitCard = true
+const loggedInFromGoogle = false
+const loggedInFromEmail = true
 
 // if (userLoggedIn && debitCard && 2==3) {
 //     console.log("Allow to buy course");
