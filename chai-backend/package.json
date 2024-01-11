@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "delploying an app.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node .\nindex.js"
   },
@@ -14,6 +15,7 @@
   "author": "IMxSuhasTheBoy",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2"
   }
 }
