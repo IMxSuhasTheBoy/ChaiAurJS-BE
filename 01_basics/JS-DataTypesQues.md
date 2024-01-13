@@ -66,7 +66,7 @@ const sub = (first, second) => console.log(`Subtraction: ${first - second}`);
 ///calling
 console.log(`Addition: ${add(first, second)}`);
 
-if (!isNaN(first, second)) {
+if (!isNaN(first, second) && first >= second) {
   sub(first, second);
 }
 ```

@@ -1,0 +1,38 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+html {
+  font-size: 10px;
+}
+.container {
+  font-size: 2rem;
+  max-width: 80rem;
+  color: white;
+  padding: 2rem 6rem;
+  background-color: rgb(62, 145, 148);
+  margin: 0 auto;
+  line-height: 1.7;
+}
+li {
+  margin-top: 2rem;
+}
+@media (max-width: 900px) {
+  .container {
+    padding: 2rem 2rem;
+    background-color: burlywood;
+  }
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 8px;
+  }
+  .container {
+    padding: 2rem 2rem;
+    line-height: 1.2;
+  }
+}
