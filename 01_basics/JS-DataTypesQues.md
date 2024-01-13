@@ -70,3 +70,20 @@ if (!isNaN(first, second) && first >= second) {
   sub(first, second);
 }
 ```
+
+```javascript
+const first = 80.5;
+const second = 90;
+const marksFrom = 200;
+
+const ave = (num1, num2, marksFrom) => {
+  let total = num1 + num2;
+  return (total / marksFrom) * 100;
+};
+///taking user input
+// const first = parseFloat(prompt("enter first number"));
+// const second = parseFloat(prompt("enter second number"));
+
+const result = ave(first, second, marksFrom);
+console.log(result);
+```
