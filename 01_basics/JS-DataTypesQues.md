@@ -72,18 +72,130 @@ if (!isNaN(first, second) && first >= second) {
 ```
 
 ```javascript
-const first = 80.5;
-const second = 90;
-const marksFrom = 200;
+///Quesion 4:  WAP to calculate total marks in two subject and then calculate percentage. (with more cheks)
+const marksArray = [];
 
-const ave = (num1, num2, marksFrom) => {
-  let total = num1 + num2;
-  return (total / marksFrom) * 100;
+const getUserInput = () => {
+  while (true) {
+    const userInput = prompt('Enter a number (or type "exit" to finish):');
+
+    if (userInput.toLowerCase() === "exit") {
+      break;
+    }
+
+    const number = parseFloat(userInput);
+
+    if (!isNaN(number)) {
+      marksArray.push(number);
+    } else {
+      alert("Invalid input. Please enter a valid number.");
+    }
+  }
 };
-///taking user input
-// const first = parseFloat(prompt("enter first number"));
-// const second = parseFloat(prompt("enter second number"));
+getUserInput();
+const calculateAverage = (...marks) => {
+  const total = marks.reduce((sum, num) => sum + num, 0);
+  const average = ((total / (marks.length * 100)) * 100).toFixed(2);
+  return { totalMarks: total, average };
+};
 
-const result = ave(first, second, marksFrom);
-console.log(result);
+const result = calculateAverage(...marksArray);
+console.log(`Total Marks ${result.totalMarks}, Average: ${result.average}`);
+
+///OneLiner
+console.log(
+  `${(
+    (Arrr.reduce((sum, num) => sum + num, 0) / (Arrr.length * 100)) *
+    100
+  ).toFixed(2)}`
+);
+```
+
+```javascript
+///Question-5: WAP to input the length and breath of rectangle and calculate the area and parimeter of rectangle.
+
+let length;
+let breath;
+while (true) {
+  length = parseFloat(prompt("Length: "));
+  breath = parseFloat(prompt("Breath: "));
+
+  if (!isNaN(length) && !isNaN(breath)) {
+    break;
+  } else {
+    alert("Invalid input. Please enter a valid number.");
+  }
+}
+
+const calculatePerimeter = (length, breath) => {
+  return 2 * (length + breath);
+};
+const calculateArea = (length, breath) => {
+  return length * breath;
+};
+
+console.log("Perimeter of rectangle:", calculatePerimeter(length, breath));
+console.log("Area of rectangle:", calculateArea(length, breath));
+
+///Version of ChatGPT------------------------------------------------------
+const getUserInput = (promptMessage) => {
+  let userInput;
+  while (true) {
+    userInput = parseFloat(prompt(promptMessage));
+    if (!isNaN(userInput)) {
+      break;
+    } else {
+      alert("Invalid input. Please enter a valid number.");
+    }
+  }
+  return userInput;
+};
+
+const rectangleLength = getUserInput("Enter the length of the rectangle: ");
+const rectangleBreadth = getUserInput("Enter the breadth of the rectangle: ");
+
+const calculatePerimeter = (length, breadth) => 2 * (length + breadth);
+const calculateArea = (length, breadth) => length * breadth;
+
+const perimeter = calculatePerimeter(rectangleLength, rectangleBreadth);
+const area = calculateArea(rectangleLength, rectangleBreadth);
+
+console.log(`Perimeter of rectangle: ${perimeter}`);
+console.log(`Area of rectangle: ${area}`);
+```
+
+```javascript
+///Question-6: WAP to input n numbers and log the average of those number.
+const arrr = [];
+
+const getUserInput = () => {
+  let userInput;
+  while (true) {
+    userInput = prompt("Enter a number (type 'exit' to finish):");
+    if (userInput.toLowerCase() === "exit") {
+      return userInput;
+    }
+
+    const number = Number(userInput);
+    if (!isNaN(number)) {
+      arrr.push(number);
+    } else {
+      alert("Enter valid number");
+    }
+  }
+};
+
+const input = getUserInput("Enter the number");
+
+const calculateAverage = (...numbers) => {
+  let sum = numbers.reduce((sum, num) => sum + num, 0);
+  return sum / numbers.length;
+};
+
+if (input.toLowerCase() === "exit" && arrr.length <= 0) {
+  console.log("User exited withou entering a number");
+} else {
+  let result = arrr.length > 0 ? calculateAverage(...arrr) : 0;
+  console.log(`Your entered Marks ${arrr}  Average: ${result}`);
+}
 ```
