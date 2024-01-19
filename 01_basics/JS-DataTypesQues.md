@@ -1,5 +1,11 @@
 # **JS** Datatypes assignment Ques 10x
 
+## !mportant Note: whenever any data stores(in variables) it takes 64-bits space
+
+## Thire data type is identified by thire starting 3 bits
+
+## ex. Object data type has 0,0,0 on its starting 3 bits. **similarly null also has 0,0,0 on its starting 3 bits, for obvious reasons (null = empty)**
+
 ```javascript
 ///Question-1 :   Input the distance in Kilometer and Convert into Meter and Centimeter.
 
