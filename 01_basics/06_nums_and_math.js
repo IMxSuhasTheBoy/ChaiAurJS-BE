@@ -83,3 +83,10 @@ ranNumStep += 1; // -8 - 10
 ranNumStep += min; //  1 - 20
 
 console.log(ranNumStep); // 1 - 20
+
+///'with' statement is considered deprecated and is not recommended for use in modern JavaScript code. It can lead to confusion and potential issues, such as accidental variable shadowing. It's generally better to explicitly reference the object properties and methods.
+// with (Math) {
+//   var pi = PI;
+//   var pieAreRound = round(pi);
+//   alert (pieAreRound)
+// }
