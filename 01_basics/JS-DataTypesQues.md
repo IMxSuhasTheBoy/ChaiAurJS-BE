@@ -199,3 +199,51 @@ if (input.toLowerCase() === "exit" && arrr.length <= 0) {
   console.log(`Your entered Marks ${arrr}  Average: ${result}`);
 }
 ```
+
+```javascript
+/// Question-7: WAP to input the distance between two cities (in km) , convert and print this distance in meter, feet, inches, and centimeter. (refactored) learnt destructuring asignment on arrays, Object.entries()...
+
+
+// Function to convert distance to different units
+function convertDistance(distance, conversionFactor) {
+  // console.log(distance, conversionFactor)
+  return distance * conversionFactor;
+}
+
+// Function to display the converted distances
+function displayConvertedDistances(distances) {
+  for (const [unit, value] of distances) {
+      console.log(`Distance in ${unit}: ${value} ${unit}`);
+  }
+}
+
+// Input: Distance in kilometers
+// const distanceInKm = parseFloat(prompt("Enter the distance between two cities in kilometers:"));
+const distanceInKm = 3;
+
+// Check if the input is a valid positive number
+if (!isNaN(distanceInKm) && distanceInKm >= 0) {
+  // Define conversion factors
+  const conversionFactors = {
+      meters: 1000,
+      feet: 3280.84,
+      inches: 39370.1,
+      centimeters: 100000,
+  };
+
+  // Convert distances
+  const convertedDistances = Object.entries(conversionFactors).map(([unit, factor]) => [unit, convertDistance(distanceInKm, factor)]);
+
+  // console.log(Object.entries(conversionFactors))
+  // console.log(convertedDistances)
+
+  // Display the converted distances
+  displayConvertedDistances(convertedDistances);
+} else {
+  console.log("Invalid input. Please enter a valid positive number for distance.");
+}
+
+///learning1 : Object.entries(conversionFactors):This method returns an array of key-value pairs from the conversionFactors object. Each pair is represented as an array.
+
+///learning2 : The use of square brackets around unit and factor in the destructuring assignment is a concise way to extract values from the key-value pairs in the array returned by Object.entries(conversionFactors). It allows you to directly use these extracted values within the arrow function, making the code more readable and expressive.
+```
