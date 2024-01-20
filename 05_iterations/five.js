@@ -38,18 +38,16 @@ myCoding.forEach((item) => {
   // console.log(item.languageName, "b")
 });
 
-///JS M&E Challenge 1
-
-let total = 0;
 ///---------------------
+///JS M&E Challenge 1
 let workers = [
-  { name: "Sophia", salary: 75000, age: 20 },
-  { name: "David", salary: 52000, age: 20 },
-  { name: "John", salary: 50000, age: 20 },
-  { name: "Alice", salary: 60000, age: 20 },
-  { name: "Bob", salary: 55000, age: 20 },
-  { name: "Eva", salary: 70000, age: 20 },
-  { name: "Mike", salary: 48000, age: 20 },
+  { name: "Sophia", salary: 75000, age: 24 },
+  { name: "David", salary: 52000, age: 35 },
+  { name: "John", salary: 50000, age: 60 },
+  { name: "Alice", salary: 60000, age: 70 },
+  { name: "Bob", salary: 55000, age: 40 },
+  { name: "Eva", salary: 70000, age: 75 },
+  { name: "Mike", salary: 48000, age: 25 },
 ];
 
 // Function to calculate total salary and average salary using reduce
@@ -74,7 +72,6 @@ function calculateTotalAndAverageSalary(workerArray) {
 let result = calculateTotalAndAverageSalary(workers);
 console.log("Total Salary of all workers: $" + result.totalSalary);
 console.log("Average Salary of all workers: $" + result.averageSalary);
-///------------------
 
 ///Brutforce solution
 let totall = 0;
@@ -88,3 +85,4 @@ function calcAverage(workersArray) {
 
 let res = calcAverage(workers);
 console.log(res);
+///------------------
