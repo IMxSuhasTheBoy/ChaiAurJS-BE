@@ -52,3 +52,39 @@ const loggedInFromEmail = true
 // if (loggedInFromGoogle || loggedInFromEmail) {
 //     console.log("User logged in");
 // }
+
+// if(1 == true){ console.log("first")};
+
+
+
+// let aAge = 80;
+// let bAge = 9000;
+// let cAge = 1008;
+
+// if ( aAge > bAge && aAge > cAge){
+//     console.log("A")
+// }
+// else if ( cAge > aAge && cAge> bAge){
+//     console.log("C")
+// }
+// else if ( bAge > aAge && bAge > cAge){
+//     console.log("B")
+// } else{
+// console.log("all are same")
+// }
+ 
+let aAge = 8;
+let bAge = 9;
+let cAge = 39;
+
+const ages = [aAge, bAge, cAge];
+const maxAgeIndex = ages.indexOf(Math.max(...ages));
+console.log(maxAgeIndex)
+
+if (maxAgeIndex === 0) {
+  console.log("A");
+} else if (maxAgeIndex === 1) {
+  console.log("B");
+} else if (maxAgeIndex === 2) {
+  console.log("C");
+}
