@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+  background-color: cadetblue;
+}
+form {
+  width: 400px;
+  background-color: bisque;
+  margin: 10px auto;
+}

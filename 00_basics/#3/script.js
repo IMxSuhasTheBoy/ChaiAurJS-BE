@@ -13,10 +13,7 @@ const id = setInterval(() => {
     endValue--;
   }
 
-  console.log(endValue);
-
   if (endValue >= texts[arrayEleIdx].length + 3) {
-    console.log(texts[arrayEleIdx]);
     isForwards = false;
   } else if (endValue <= 0) {
     isForwards = true;
