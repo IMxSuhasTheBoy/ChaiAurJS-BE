@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send("BACKEND Series!");
 });
 
-app.get("/twitter", (req, res) => {
+app.get("/socials", (req, res) => {
   res.send("IMxSuhasTheBoy");
 });
 
