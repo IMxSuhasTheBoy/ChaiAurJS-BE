@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send("BACKEND Series!");
 });
 
-app.get("/twitter", (req, res) => {
+app.get("/socials", (req, res) => {
   res.send("IMxSuhasTheBoy");
 });
 
@@ -19,7 +19,7 @@ app.get("/youtube", (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Commitment 26 jan 2024 app listening on port ${port}`);
 });
 
 // console.log(process.env);
