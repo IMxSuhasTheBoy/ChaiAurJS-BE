@@ -110,7 +110,6 @@ const logElemets = (ele, idx) => {
 
 ["AMC", "BMW", "GM"].forEach(logElemets);
 
-
 ///-------------------------------------------good ex for how to handle this binding in a callback function within the context of a class method, ensuring that it refers to the correct instance.
 
 class Counter {
@@ -133,3 +132,37 @@ obj.add([2, 5, 9]);
 console.log(obj.count); // 3
 console.log(obj.sum); //16
 ///count (the number of entries in the array), and sum is (the sum of all entries in the array).
+
+///------------------------------------
+workers.forEach((element) => {
+  Object.entries(element).forEach(([key, value]) => {
+    console.log(`${key} : ${value}`);
+  });
+  console.log(" ");
+});
+
+///------------------------------------
+
+const arr = ["a", "b", "c"];
+
+// Prints "a", "b", "c", even though each callback invocation adds
+// a new element to the array.
+arr.forEach((v) => {
+  arr.push(v.toUpperCase());
+  // arr.shift();
+  // console.log(v); // a b c
+});
+// console.log(arr);
+///------------------------------------
+
+const arrWithHoles = ["a", , "c"];
+
+// Prints "a", "c"
+arrWithHoles.forEach((v) => {
+  console.log(v);
+});
+
+// Prints "a", "undefined", "c". `Array.from()` removes holes
+Array.from(arrWithHoles).forEach((v) => {
+  console.log(v);
+});
