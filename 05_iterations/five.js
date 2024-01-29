@@ -38,7 +38,7 @@ myCoding.forEach((item) => {
   // console.log(item.languageName, "b")
 });
 
-///---------------------
+///---------------------Docs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#converting_a_for_loop_to_foreach
 ///JS M&E Challenge 1
 let workers = [
   { name: "Sophia", salary: 75000, age: 24 },
@@ -86,3 +86,50 @@ function calcAverage(workersArray) {
 let res = calcAverage(workers);
 console.log(res);
 ///------------------
+
+const cars1 = ["AMC", "BMW", "GM"];
+
+const copyCars1 = [];
+///ex1
+// for (let i = 0; i < cars1.length; i++) {
+//   copyCars1.push(cars1[i]);
+// }
+
+///ex2
+// ["AMC", "BMW", "GM"].forEach((i) => {
+//   copyCars1.push(i);
+// });
+console.log(copyCars1);
+
+console.table(cars1);
+
+///ex3
+const logElemets = (ele, idx) => {
+  console.log(`At ${idx} it's ${ele}`);
+};
+
+["AMC", "BMW", "GM"].forEach(logElemets);
+
+
+///-------------------------------------------good ex for how to handle this binding in a callback function within the context of a class method, ensuring that it refers to the correct instance.
+
+class Counter {
+  constructor() {
+    this.sum = 0;
+    this.count = 0;
+  }
+
+  add(array) {
+    ///unlike normal func. Arrow functions do not have their own this bindings. automatically captures the correct this from the context in which it is defined.
+    array.forEach((entry) => {
+      this.sum += entry;
+      ++this.count;
+    });
+  }
+}
+
+const obj = new Counter();
+obj.add([2, 5, 9]);
+console.log(obj.count); // 3
+console.log(obj.sum); //16
+///count (the number of entries in the array), and sum is (the sum of all entries in the array).
