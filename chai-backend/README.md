@@ -1,6 +1,6 @@
 # ChaiAurBackend
 
-npm pkg
+npm pkg/ dependencies
 
 - express
 
@@ -8,7 +8,11 @@ npm pkg
 
 - dotenv
 
-> load environment variables from .env file, into process.env
+> load environment variables from .env file, into process.env (NOTE: asap* import & configure dotenv in the file that is responsible to initialise the application)
+
+- mongoosejs
+
+>
 
 ## 4 Data modeling for backend
 
