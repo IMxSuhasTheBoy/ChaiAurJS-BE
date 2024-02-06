@@ -43,6 +43,8 @@ for (let index = 0; index < myArray.length; index++) {
 
 
 // break and continue
+/// break: on condition met the nearest loop terminates
+/// continue: on conditon met the current iteration skips, loop contineues from next iteration
 
 for (let index = 1; index <= 20; index++) {
     if (index === 5) {
