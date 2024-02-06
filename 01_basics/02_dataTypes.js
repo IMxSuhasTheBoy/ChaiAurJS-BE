@@ -39,3 +39,8 @@ console.log(typeof typeof undefined); ///typeof typeof "number"=> string
 console.log(typeof typeof null); ///typeof typeof "number"=> string
 console.log(typeof typeof 10); ///typeof typeof "number"=> string
 console.log(typeof 10)
+
+////Methods for NaN
+///isNaN: The isNaN function coerces the argument before checking for NaN. It converts the argument to a number and then checks if it is NaN. However, be cautious when using isNaN, as it can produce unexpected results for non-numeric values. It's recommended to use Number.isNaN for more reliable NaN checks.
+
+///Number.isNaN: The Number.isNaN function is a more reliable way to check for NaN. It performs a strict check and does not perform any coercion. It returns true only if the provided value is exactly NaN.
