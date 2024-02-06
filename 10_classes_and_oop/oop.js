@@ -1,3 +1,41 @@
+////Here's a basic example that showcases all three programming paradigms (procedural, object-oriented, and functional) in JavaScript:.(thanks to chatGPT)
+
+///Procedural Programming
+function greet(name) {
+    return "Hello, " + name + "!";
+  }
+  
+  // Object-Oriented Programming
+  class Person {
+    constructor(name) {
+      this.name = name;
+    }
+  
+    greet() {
+      return "Hello, " + this.name + "!";
+    }
+  }
+  
+  // Functional Programming
+  const greetFunctional = (name) => {
+    return "Hello, " + name + "!";
+  };
+  
+  // Usage
+  const name = "John";
+  
+  // Procedural
+  console.log(greet(name));
+  
+  // Object-Oriented
+  const person = new Person(name);
+  console.log(person.greet());
+  
+  // Functional
+  console.log(greetFunctional(name));
+  
+
+///------------------------------------------------
 const user = {
     username: "hitesh",
     loginCount: 8,
