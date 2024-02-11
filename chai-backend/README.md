@@ -12,7 +12,7 @@ npm pkg/ dependencies
 
 - mongoosejs
 
->
+> schema modeling framework
 
 ## 4 Data modeling for backend
 
