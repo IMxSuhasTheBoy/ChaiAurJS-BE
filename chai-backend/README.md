@@ -14,7 +14,7 @@ npm pkg/ dependencies
 
 > schema modeling framework
 
-## 4 Data modeling for backend
+## Data modeling for backend
 
 Que. What data, fields is to be stored & how.
 
