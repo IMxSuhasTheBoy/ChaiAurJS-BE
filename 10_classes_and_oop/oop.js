@@ -28,7 +28,7 @@ function greet(name) {
   console.log(greet(name));
   
   // Object-Oriented
-  const person = new Person(name);
+  const person = new Person("name");
   console.log(person.greet());
   
   // Functional
