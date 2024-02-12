@@ -11,5 +11,9 @@ router.get("/user/:id", (req, res) => {
   const userid = req.params.id;
   res.send(`${userid}`);
 });
+router.get("/search", (req, res) => {
+  const query = req.query.q;
+  res.send(`Search Query: ${query}`);
+});
 
 export default router;

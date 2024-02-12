@@ -18,9 +18,10 @@ app.use("/", routes);
 app.get("/socials", (req, res) => {
   res.send({ message: "IMxSuhasTheBoy" });
 });
-
 app.get("/youtube", routes);
 app.get("/user/:id", routes);
+app.get('/search', routes);
+
 
 ///              Catch-All Route : Handle unmatched routes:
 app.get("*", (req, res) => {
