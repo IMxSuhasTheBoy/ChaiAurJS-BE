@@ -16,7 +16,7 @@
 
 1. GLOBAL CSS
 
-2. responsive
+2. RESPONSIVE
 
 - media query 1
 
