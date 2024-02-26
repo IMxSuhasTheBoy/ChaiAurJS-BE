@@ -16,7 +16,9 @@
 
 1. GLOBAL CSS
 
-2. media query 1
+2. RESPONSIVE
+
+- media query 1
 
 > max-width: 1200px
 
