@@ -11,3 +11,8 @@
 // export default math;
 
 export { default } from "../math.js" ///thanks to chatGPT
+
+// console.log(process);
+// console.log(__dirname);
+// console.log(__filename);
+// console.log(module);

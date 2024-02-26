@@ -21,6 +21,15 @@ const regularUser = {
 
 // console.log(regularUser.fullname.userfullname.firstname);
 
+const {fullname:{userfullname:{firstname, lastname}}} = regularUser
+
+// console.log(firstname, lastname)
+
+const exercise1 = { random: [100, { message: "pickMe1" }] };
+
+let { random: [, {message: gotPick1}] } = exercise1
+console.log(gotPick1)
+
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
@@ -51,8 +60,8 @@ const users = [
 ]
 
 //----------------------
-// const test = users.map((ele)=>{
-//     console.log(ele.email)
+// const test = users.map((ele, idx)=>{
+//     console.log(ele.email, idx)
 // })
 //----------------------
 
@@ -80,8 +89,8 @@ const course = {
 // console.log(courseInstructor);      // destructure : key is now a const with it's value
 
 
-const {courseInstructor: instructor} = course 
-const {coursename: nameOfCourse} = course      // destructure, with const name as we want 
+const {courseInstructor: instructor} = course;
+const {coursename: nameOfCourse} = course;      // destructure, with const name as we want 
 // console.log(`${instructor} with ${nameOfCourse}, is awesome!`);
 
 
@@ -102,3 +111,32 @@ const {coursename: nameOfCourse} = course      // destructure, with const name a
 
 // tree form of json data is easier for understanding!
 // json js object notation : for universal format use of data through api fetch
+
+
+///----------------------------make map from Obj
+const ingredients = {
+    "masalas": "biryani masala",
+    "rice": "biryani rice",
+    "oil": "mustard oil",
+    "chiken": "1kg"
+}
+
+const marketList = new Map(Object.entries(ingredients))
+console.log(marketList)
+
+console.log([...marketList.keys()]);
+console.log([...marketList.values()]);
+
+
+const exercise8 = new Map([
+    [0, "intro"],
+    [5, "song"],
+    [15, "action"],
+    [35, "song"],
+    [67, "interval"],
+    [78, "action"],
+    [98, "credits"],
+]);
+
+let uniqueScenes = new Set([...exercise8.values()]);
+console.log(uniqueScenes);

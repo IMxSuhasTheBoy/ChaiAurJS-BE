@@ -31,9 +31,12 @@ console.log(Array.from("Hiteshfddss")); /// string is converted in to arr with e
 ///console.log(Array.from({ name: "hitesh" }).values); /// !nteresting  : to make an arr from obj must specify for key / value to have in arr, syntax to be learnt and modify, not usefull currently
 
 //---------------------
-const ggSet = new Set(["foo", "bar", "baz", "foso"]);
+const ggSet = new Set(["river", "ocean", "windmill", "ocean", "rain", "ocean"]);
 
 console.log(ggSet);
+console.log(ggSet.size);
+console.log(ggSet.has("pond"));
+/// add( ) delete() clear()
 
 // console.log(Array.from(ggSet));
 // console.log(Array.of(ggSet));
@@ -42,8 +45,25 @@ console.log(ggSet);
 let score1 = 100;
 let score2 = 200;
 let score3 = 300;
+let score4 = 500;
 
 console.log(Array.of(score1, score2, score3));
+
+const scores = Array.of(score1, score2, score3, score4);
+const nestArry = [3, [1, "pick"]];
+
+///Destructring
+const [got1, got2, got3] = scores;
+const [, [, gotPick]] = nestArry;
+
+console.log(gotPick);
+
+///Rest
+const [x, y, ...remaining] = scores;
+console.log(remaining)
+
+const exercise2 = [1, [0,1]];
+console.log( [...exercise2, 7, ...exercise2[1]] )
 
 ///[][][][[][][]Array Advavnced[][][][][][][] in jsvuTool.js
 
@@ -51,4 +71,3 @@ console.log(Array.of(score1, score2, score3));
 // https://github.com/v8/v8
 /// jsvu : JavaScript (engine) version Updater.
 // https://github.com/GoogleChromeLabs/jsvu#readme
-

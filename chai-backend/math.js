@@ -9,3 +9,7 @@ const math = {
   mod: (a, b) => a % b,
 };
 export default math;
+
+// export default {
+//   math: math,
+// };

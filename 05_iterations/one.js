@@ -27,6 +27,18 @@ for (let i = 1; i <= 10; i++) {
     
 }
 
+////example-------------------
+// for (let i = 1; i<= 5; i++) {
+//     console.log(i)
+//     let str = ""
+//     for (let j = 1; j <= i; j++){
+//         console.log(j)
+//       str += " *"
+//     }
+//     console.log(str)
+//   }
+////--------------------------
+
 
 let myArray = ["flash", "batman", "superman"]
 console.log(myArray.length);

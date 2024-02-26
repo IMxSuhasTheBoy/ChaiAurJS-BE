@@ -42,6 +42,14 @@ app.listen(process.env.PORT, () => {
 // console.log("Node.js Version:", process.version);
 // console.log("Platform:", process.platform);
 
+// console.log(process);
+// console.log(__dirname);
+// console.log(__filename);
+// console.log(module);
+
+// import { stdin, stdout } from 'node:process';
+process.stdout.write("hsd");
+
 // // index.js
 // console.log(process.argv);
 
@@ -49,5 +57,6 @@ app.listen(process.env.PORT, () => {
 // import { add , subtract} from "./utils/index.js";
 // console.log(add, subtract(4, 2));
 
-import math from "./utils/index.js";
-// console.log(math.mod(6, 7));
+import math from "./utils_imp_exp_practice/index.js";
+console.log(math.mod(6, 7));
+
