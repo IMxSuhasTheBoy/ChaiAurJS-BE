@@ -54,16 +54,15 @@ form.addEventListener("submit", function (e) {
     results.innerHTML = `Please give a valid weight ${weight}`;
   } else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-    //show the result
-    results.innerHTML = `<span>${bmi}</span>`;
-    // showing 2nd res
-    if (bmi <= 18.6) {
-      myResults.innerHTML = `<span>u are Under weight</span>`;
-    } else if (bmi <= 18.6 && bmi <= 30.9) {
-      myResults.innerHTML = `<span>u  weight</span>`;
+    let msg = "";
+    if (bmi < 18.6) {
+      msg = "Underweight";
+    } else if (bmi >= 18.6 && bmi <= 24.9) {
+      msg = "NormalWeight";
     } else {
-      myResults.innerHTML = `<span>u over weight</span>`;
+      msg = "Overweight";
     }
+    results.innerHTML = `<span>${bmi} - ${msg}</span>`;
   }
 });
 ```
@@ -73,8 +72,6 @@ form.addEventListener("submit", function (e) {
 ```javascript
 const clock = document.getElementById("clock");
 // const clock = document.querySelector('#clock')
-
-//got time, but it's not working like a runing clock -> make it running on every second with setInterval
 
 setInterval(function () {
   let date = new Date();
@@ -99,7 +96,7 @@ const startOver = document.querySelector(".resultParas"); // to show after all a
 
 const p = document.createElement("p");
 
-let prevGuess = []; // to store the userInputs for update & show in guessSlot, also to handle game rules using validations
+let prevGuess = []; // to store the userInputs for update & show in guessSlot so user knows what was guessed already, also to handle game rules using validations
 let numGuess = 1; // to track the attempts, for terminate on limit 10
 
 let playGame = true; // conventional game designed  to allow to play/not to play
@@ -135,7 +132,7 @@ function validateGuess(guess) {
   }
 }
 
-//function for checking guess with the random number
+//function for campairng guess with the random number
 function checkGuess(guess) {
   if (guess === randomNumber) {
     displayMessage(`You guessed it right`);
@@ -150,7 +147,7 @@ function checkGuess(guess) {
 //function for display guess dom mainipulation
 function displayGuess(guess) {
   // cleanUp & updating displaying values
-  userInput.value = ""; //cleanUp the field after checking & calling display functions
+  userInput.value = ""; //cleanUp the field after checking & calling display functions//here clear the input field cause value is submited
   guessSlot.innerHTML += `${guess}   `; // pushing the value
   numGuess++;
   remaining.innerHTML = `${11 - numGuess}`;
@@ -158,7 +155,7 @@ function displayGuess(guess) {
 
 //function for all other final dom manipulation
 function displayMessage(message) {
-  lowOrHi.innerHTML = `<h2>${message}</h2>`; // message calls & values are avilable in parameter here, as given from the checkGuess func according to conditons
+  lowOrHi.innerHTML = `<h2>${message}</h2>`; // message calls & values are available in parameter here, as given from the checkGuess func according to conditons
 }
 
 function endGame() {
@@ -177,8 +174,7 @@ function newGame() {
     prevGuess = [];
     numGuess = 1;
     guessSlot.innerHTML = "";
-    remaining.innerHTML = "";
-    remaining.innerHTML = `${10 - numGuess}`;
+    remaining.innerHTML = `${11 - numGuess}`;
     userInput.removeAttribute("disabled");
     startOver.removeChild(p);
 

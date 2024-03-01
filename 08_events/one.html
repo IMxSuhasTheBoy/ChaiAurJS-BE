@@ -8,7 +8,10 @@
   <body style="background-color: #414141; color: aliceblue">
     <h2>Amazing image</h2>
     <div>
-      <ul id="images">
+      <ul
+        id="images"
+        style="display: flex; list-style: disc; gap: 2rem; flex-wrap: wrap"
+      >
         <li>
           <img
             width="200px"
@@ -50,7 +53,7 @@
           />
         </li>
         <li>
-          <a style="color: aliceblue" href="https://google.com" id="google"
+          <a style="color: aliceblue" href="https://google.com" class="anchor" id="google"
             >Google</a
           >
         </li>
@@ -65,7 +68,7 @@
     //  attachEvent()                                     // old approach
     // jQuery - on                                        // old
     //------------------------------------------------------------------------
-    // ↓ important events to practice
+    // ↓ important event object properties to practice
 
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
@@ -75,32 +78,35 @@
     // bubbling example---
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul", e.timeStamp, e);                      // pointer event object consist : browser & environment events
-    // }, false)                                            // 3rd value is event propogation false context : event-bubbling | true context : event-capturing
+    // }, false)                                            // 3rd value in parameter is event propogation false context : event-bubbling | true context : event-capturing
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
     //     e.stopPropagation()
-    // }, false)                                            // can be swiched to capturing / bubbling using true/false  / better way use stopPropagation for stop bubbling of particular element
+    // }, false)                                            // can be swiched to capturing / bubbling using true/false  / better way use stopPropagation for stop bubbling of particular element, so the event on owl won't propogate to parent
     // bubbling example---↖
+    ///Docs https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#safely_detecting_option_support
 
     //---when clicking on link of google, we preventing to open link in new tab , also its bubbling
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log("google clicked");
-    // }, false)
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        // e.stopPropagation()
+        console.log("google clicked");
+        console.log(e.currentTarget === this, this.className) ///arrow func dont have this context
+    }, false)
 
-    //--- when clicking an img that img should be gone
+    //---Task: when clicking an img that li should be gone : approach bubbling,
     document.querySelector("#images").addEventListener("click", function (e) {
-      // console.log(e.target.parentNode);
-      console.log(e.target.tagName);
+      console.log(e.target.parentNode);
+      // console.log(e.target.tagName);
       if (e.target.tagName === "IMG") {
         console.log(e.target.id);
-        let removeLi = e.target.parentNode;
-        removeLi.remove();
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
       }
     });
 
-    // removeIt.parentNode.removeChild(removeIt)
+    // removeIt.parentNode.removeChild(removeIt)// alternate approach
+    ///Function.prototype.bind() usecases oocures when dealing with eventlisteners : assigning this context , getting data in & out of eventlisteners
   </script>
 </html>
