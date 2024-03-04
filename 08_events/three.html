@@ -28,16 +28,16 @@
       console.log(str, Date.now());
     };
 
-    let intervalId = undefined;
+    let intervalId;
 
     document.querySelector("#start").addEventListener("click", () => {
-      if (intervalId === undefined) {
+      if (!intervalId) {
         intervalId = setInterval(sayDate, 2000, "hey!");
       }
     });
     document.querySelector("#stop").addEventListener("click", () => {
       clearInterval(intervalId);
-      intervalId = undefined;
+      intervalId = null;
     });
   </script>
 </html>

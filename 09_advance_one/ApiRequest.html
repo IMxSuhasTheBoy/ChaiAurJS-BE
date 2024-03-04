@@ -20,25 +20,32 @@
   </body>
   <script>
     const requestUrl = "https://api.github.com/users/IMxSuhasTheBoy";
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", requestUrl);
+    const xhr = new XMLHttpRequest(); //1/
+    xhr.open("GET", requestUrl); //2/
+    console.log("state of request 1", xhr.readyState);
     let data;
     xhr.onreadystatechange = function () {
-      console.log(xhr.readyState);
+      console.log("state of request 2++", xhr.readyState);
       if (xhr.readyState === 4) {
-        data = JSON.parse(this.responseText);
+        data = this.responseText;
+        ///data is in string format:-
+        console.log(data, "responseText");
+        data = JSON.parse(this.responseText); ///parse the string of response obj
         console.log(typeof data);
         console.log(data.followers);
         console.log(data.name);
         console.log(data.public_repos);
       }
-    };
-    xhr.send();
+    }; //To monitor the state of request/ can be used to perform a func on particular state change
+    xhr.send(); //3/
 
     const card = document.querySelector("#card");
     const btn = document.querySelector("button");
     btn.addEventListener("click", () => {
-      let content = `<div><img style="width: 30px;" src="${data.avatar_url}" alt=""><p>${data.name} <br> ${data.followers}</p></div>`;
+      let content = `<div>
+        <img style="width: 30px;" src="${data.avatar_url}" alt="">
+        <p>${data.name}<br>${data.followers}</p>
+        </div>`;
       card.innerHTML = content;
     });
   </script>
