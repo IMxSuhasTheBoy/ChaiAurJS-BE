@@ -7,12 +7,13 @@ class User {
         console.log(`Username: ${this.username}`);
     }
 
-    static createId(){
+    static createId(){ ///! used avoid access of the method to be included the in instance
         return `123`
     }
 }
 
 const hitesh = new User("hitesh")
+// hitesh.createId()
 // console.log(hitesh.createId())
 
 class Teacher extends User {
@@ -23,4 +24,6 @@ class Teacher extends User {
 }
 
 const iphone = new Teacher("iphone", "i@phone.com")
-console.log(iphone.createId());
+iphone.logMe()
+console.log(iphone.email)
+// console.log(iphone.createId());

@@ -5,7 +5,8 @@ function SetUsername(username){
 }
 
 function createUser(username, email, password){
-    SetUsername.call(this, username)
+    SetUsername.call(this, username) //* explicit calling to hold ref of variable before the completion of SetUsername func, from the callStack & EC
+    // SetUsername.call( username)
    
     this.email = email
     this.password = password

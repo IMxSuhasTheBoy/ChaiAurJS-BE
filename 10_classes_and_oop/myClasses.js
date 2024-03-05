@@ -6,7 +6,7 @@ class User {
         this.email = email;
         this.password = password
     }
-
+    //*(method) internally as a func syntax
     encryptPassword(){
         return `${this.password}abc`
     }
@@ -21,7 +21,7 @@ const chai = new User("chai", "chai@gmail.com", "123")
 console.log(chai.encryptPassword());
 console.log(chai.changeUsername());
 
-// behind the scene
+// behind the scene equivalent code using prototype-based syntax:
 
 function User(username, email, password){
     this.username = username;
