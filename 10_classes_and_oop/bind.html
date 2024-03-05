@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React</title>
 </head>
-<body>
+<body style="background-color: darkblue;">
     <button>Button Clicked</button>
     <!-- <script src="oop.js"></script> -->
 </body>
@@ -15,18 +15,21 @@
             this.library = "React"
             this.server = "https://localhost:300"
 
-            //requirement
+            //requirement :   on page load - create Object from React - have ref of DOM button ele - & method defined for click event - 
             document
                 .querySelector('button')
-                .addEventListener('click', this.handleClick.bind(this))
+                .addEventListener('click', this.handleClick.bind(this)) ///.bind(this) //binding the current properties ref of the constructor so we can access them, similar to calling method
 
         }
         handleClick(){
             console.log("button clicked");
-            console.log(this.server);
+            console.log(this); //AWESOME! having ref of DOM ele ( BECAUSE METHOD IS BEING CALLED BY BUTTON ELE EVENT )
+            console.log(this.server); //
         }
     }
 
     const app = new React()
+    ///as similar to having access of handleClick methods this. ref, wanted to have ref while accessing constructor Object properties in the DOM manipulation code that needd to have ref of the exact ref that handleClick is having. (Reason that ref is being undefined is that after the method is finished the EC & it's values are no more available, before the ref get lost, learn usage of .bind()  for solution)
+    // app.handleClick();
 </script>
 </html>
