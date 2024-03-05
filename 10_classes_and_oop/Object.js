@@ -9,25 +9,35 @@ multipleBy5.awesome = 2
 // console.log(multipleBy5.awesome);
 // console.log(multipleBy5.prototype);
 
-///
+//////////////////////////////////////////////////////////
 
-// function createUser(username, score){
-//     this.username = username
-//     this.score = score
-// }
+function createUser(username, score){
+    this.username = username
+    this.score = score
+}
+console.log(createUser.prototype)
 
-// createUser.prototype.increment = function(){
-//     this.score++
-// }
-// createUser.prototype.printMe = function(){
-//     console.log(`price is ${this.score}`);
-// }
 
-// const chai = new createUser("chai", 25)
-// const tea = createUser("tea", 250)
+
+createUser.prototype.increment = function(){
+    this.score++
+}
+
+
+createUser.prototype.printMe = function(){
+    console.log(`price is ${this.score}`);
+}
+
+
+console.log(createUser.prototype)
+
+const chai = new createUser("chai", 25)
+const tea = createUser("tea", 250)
+
+// tea.increment()
+// tea.printMe()
 
 // chai.printMe()
-
 
 /*
 

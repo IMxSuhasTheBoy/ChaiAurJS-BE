@@ -1,5 +1,5 @@
 // let myName = "hitesh     "
-// let mychannel = "chai     "
+let mychannel = "chai     "
 
 // console.log(myName.trueLength);
 
@@ -16,20 +16,22 @@ let heroPower = {
     }
 }
 
-Object.prototype.hitesh = function(){
-    console.log(`hitesh is present in all objects`);
+Object.prototype.hitesh = function(gotit){
+    console.log(`hitesh is present in all objects ${this.gotit} ${gotit} ${this.thor}`);
 }
 
 Array.prototype.heyHitesh = function(){
     console.log(`Hitesh says hello`);
 }
+// console.log(heroPower.hitesh("sds"))
+
 
 // heroPower.hitesh()
 // myHeros.hitesh()
-// myHeros.heyHitesh()
+myHeros.heyHitesh()
 // heroPower.heyHitesh()
 
-// inheritance
+//TODO: inheritance
 
 const User = {
     name: "chai",
@@ -41,7 +43,8 @@ const Teacher = {
 }
 
 const TeachingSupport = {
-    isAvailable: false
+    isAvailable: false,
+    canTakeBreak: "true"
 }
 
 const TASupport = {
@@ -52,16 +55,23 @@ const TASupport = {
 
 Teacher.__proto__ = User
 
+console.log(typeof TeachingSupport.canTakeBreak);
+
 // modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher)
+
+console.log( TeachingSupport.makeVideo);
+////////////////////////////////////////////////////////////////
 
 let anotherUsername = "ChaiAurCode     "
 
 String.prototype.trueLength = function(){
-    console.log(`${this}`);
+    console.log(`"${this}"`);
+    // console.log(`Length is: ${this.length}`)
     console.log(`True length is: ${this.trim().length}`);
 }
 
 anotherUsername.trueLength()
 "hitesh".trueLength()
-"iceTea".trueLength()
+"     iceTea".trueLength()
+mychannel.trueLength()
