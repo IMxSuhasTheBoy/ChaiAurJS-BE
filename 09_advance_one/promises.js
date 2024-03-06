@@ -113,7 +113,7 @@ fetch("https://api.github.com/users/hiteshchoudhary")
     return response.json();
   })
   .then((data) => {
-    console.log(data);
+    // console.log(data);
   })
   .catch((error) => {
     console.log(`error data fetching ${error}`);
@@ -130,5 +130,35 @@ fetch("https://api.github.com/users/hiteshchoudhary")
 
 // A fetch() promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar). A fetch() promise does not reject on HTTP errors (404, etc.). Instead, a then() handler must check the Response.ok and/or Response.status properties.
 
-// // promise.all
-// // yes this is also available, kuch reading aap b kro.
+/// promise.all
+// yes this is also available, kuch reading aap b kro.
+
+///*Exapmples
+const doFetch = async () => {
+  try {
+    // let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
+
+    // let response = await fetch(url);
+    // let commits = await response.json(); // read response body and parse as JSON
+    // console.log(commits[0].author.login);
+
+    let response2 = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
+    // get one header
+    console.log(response2.headers.get('Content-Type')); // application/json; charset=utf-8
+    // iterate over all headers
+    for (let [key, value] of response2.headers) {
+      console.log(`${key} = ${value}`);
+    }
+
+  } catch (error) {
+      console.log(error)
+  }
+}
+
+
+doFetch()
+
+// fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
+//   .then(response => response.json())
+//   .then(commits => console.log(commits[0].author.login));
+///*
