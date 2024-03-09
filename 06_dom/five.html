@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>screen properties</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      document.getElementById("demo").innerHTML =
+        "Available screen width is " + screen.orientation.type;
+
+      screen.orientation.addEventListener("change", (event) => {
+        const type = event.target.type;
+        const angle = event.target.angle;
+        console.log(`ScreenOrientation change: ${type}, ${angle} degrees.`);
+      });
+    </script>
+  </body>
+</html>

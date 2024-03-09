@@ -1,4 +1,7 @@
 {
   "liveServer.settings.port": 5501,
-  "editor.acceptSuggestionOnEnter": "on"
+  "editor.acceptSuggestionOnEnter": "on",
+  "html-to-css-autocompletion.getSelectorsFromFileTypes": ["html"],
+  "html-to-css-autocompletion.autocompletionFilesScope": "linked-files",
+  "html-to-css-autocompletion.triggerCharacters": false
 }

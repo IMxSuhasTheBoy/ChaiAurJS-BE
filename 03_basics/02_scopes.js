@@ -31,7 +31,7 @@ function one(){
 
 }
 
-one()
+// one()
 ///-----------------------
 
 
@@ -91,4 +91,47 @@ function printName() {
 }
 
 console.log(myName);
-printName();
+// printName();
+
+
+//!nteresting : because of functions & globals exicution context. & call stack.
+
+fruitFun(); // call the func first
+
+// fruit variable can be used here
+console.log(fruit);
+
+function fruitFun() {
+    // "use strict" //TODO: toggle
+
+     fruit = "mangoes"; //TODO: toggle
+    // const fruit = "mangoes"; //TODO: toggle
+    console.log(fruit); // fruit variable can be used here
+};
+
+console.log(fruit);
+
+
+// let fillContent = "" //TODO: toggle
+
+//!callStack error cause no termination condition myFunc1() -------closure
+function myFunc1() {
+    "use strict"; //TODO: toggle
+    
+    fillContent = "hellow";
+    function myFunc3() {
+        console.log("llll");
+        myFunc1();
+    }
+    //!callStack error cause no termination condition myFunc3() -------- closure
+  }
+
+//!   myFunc3()
+
+  function myFunc2() {
+    myFunc1();
+    fillContent += " work";
+  }
+  myFunc2();
+
+  console.log(fillContent);

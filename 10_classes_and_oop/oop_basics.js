@@ -30,7 +30,8 @@ function createPerson(firstName, lastName) {
 const jane = createPerson("Jane", "Smith");
 console.log(jane.getFullName());
 
-//TODO: ES6 class contructors to do easier with inheritance js.
+//!class declarations are not hoisted.
+//TODO: ES6 class contructors to do easier & cleaner with inheritance of js.
 class Animal {
   constructor(name, isPetAnimal) {
     this.name = name;

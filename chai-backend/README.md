@@ -8,7 +8,7 @@ npm pkg/ dependencies
 
 - dotenv
 
-> load environment variables from .env file, into process.env (NOTE: asap* import & configure dotenv in the file that is responsible to initialise the application)
+> load environment variables from .env file, into process.env (NOTE: asap\* import & configure dotenv in the file that is responsible to initialise the application)
 
 - mongoosejs
 
@@ -23,3 +23,13 @@ Que. What data, fields is to be stored & how.
 - Schema model document relation
 
 - subdocuments strategy
+
+## ChaiArFrontEnd
+
+strategy for toolchain/bundlers
+
+- data requests/fetch (axios pkg)
+
+- cors configure (cors pkg)
+
+- proxy configure (depends upon bundler eg. cra, vite)
