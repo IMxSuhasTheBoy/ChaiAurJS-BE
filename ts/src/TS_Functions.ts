@@ -1,22 +1,22 @@
-////Optional para
-function greetPerson(name: string, age?: number): string {
+//Optional para
+function greetPerson(name: string, age: number): string {
   return age ? `Hello, ${name}! You are ${age} years old.` : `Hello, ${name}!`;
 }
-////Default para
+//Default para
 function getDiscount(price: number, percentage: number = 10): number {
   return price * (percentage / 100);
 }
-////Rest para
+//Rest para
 function sumNumbers(...numbers: number[]): number {
   return numbers.reduce((sum, num) => sum + num, 0);
 }
-////default values in functions
+//default values in functions
 function studentInfo(studentName: string, studentId: number, studentClass: number = 12): void {
   console.log(studentName, studentId, studentClass);
 }///function is defined with a return type of void, indicating that it does not return any value
 
 
-////Generic type para
+//Generic type para
 function printArray<T>(arr: T[]): void {
   arr.forEach(item =>{
     console.log(item);
@@ -27,7 +27,7 @@ const strings = ["hello", "world"];
 printArray(numbers);
 printArray(strings);
 
-////Optional type specified
+//Optional type specified
 function displayData(...args: (string | object)[]) {
   args.forEach(arg => {
     ///Check if the argument is a string

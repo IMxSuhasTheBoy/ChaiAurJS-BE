@@ -32,27 +32,27 @@ let numbersA = [1, 2, 3, 4, 5]; ///type annotation/generic
 let numbersB = [1, 2, 3, 4, 5]; ///shorthand for above result
 let numbersC = [1, "2", 3, 4, 5];
 const rbgConfig = [
-  [223, 434, 112],
-  [222, 434, 122],
-  [223, 453, 152],
+    [223, 434, 112],
+    [222, 434, 122],
+    [223, 453, 152],
 ];
 ///A tuple in TypeScript is an ordered collection of elements of different types.
 let manushyaPrani = ["John Doe", 30, true];
 let set = new Set([5, 3, 1]);
 let person = {
-  name: "Alice",
-  age: 25,
-  isStudent: true,
+    name: "Alice",
+    age: 25,
+    isStudent: true,
 };
 /**first in first out collection (OOP), accepting generic type**/
 class Queue {
-  data = [];
-  push(item) {
-    this.data.push(item);
-  }
-  pop() {
-    return this.data.shift();
-  }
+    data = [];
+    push(item) {
+        this.data.push(item);
+    }
+    pop() {
+        return this.data.shift();
+    }
 }
 let queue = new Queue();
 queue.push(1);
@@ -60,6 +60,3 @@ queue.push(2);
 console.log(queue.pop()); // Output: 1
 console.log(queue.pop()); // Output: 2
 console.log(queue.pop()); // Output: undefined (queue is empty)
-
-
-

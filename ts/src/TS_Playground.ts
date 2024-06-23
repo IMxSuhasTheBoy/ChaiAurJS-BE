@@ -24,7 +24,10 @@ function getFirstEle<myEleType>(myArray: myEleType[]) {
 
 const numberss = ["we", 1, "wew", 2, 3];
 const stringss = ["ll", 1, "kk", "jj", 3, 23];
+const booleansNumbers = [true, 1, false, true, 3, 23];
 
 const firstNum = getFirstEle<number | string>(numberss);
+const firstNum2 = getFirstEle<number | boolean>(booleansNumbers);
 
 console.log(firstNum);
+console.log(firstNum2);

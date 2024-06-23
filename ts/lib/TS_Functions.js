@@ -105,3 +105,48 @@ function pattern(rows) {
     }
 }
 pattern(4);
+const logPattern = (n, total) => {
+    let str = "";
+    // Add spaces before the asterisks
+    for (let j = 0; j < total - n - 1; j++) {
+        str += " ";
+    }
+    // Add asterisks
+    for (let i = 0; i < 2 * n + 1; i++) {
+        str += "*";
+    }
+    // Print the pattern
+    console.log(str);
+};
+const callLogPattern = (m) => {
+    for (let i = 0; i < m; i++) {
+        logPattern(i, m);
+    }
+};
+callLogPattern(5);
+////--------------------------------------------
+function fibonacci(n) {
+    let fibSeries = [0, 1]; // Initialize the series with the first two Fibonacci numbers
+    // Generate the Fibonacci series up to the nth number
+    for (let i = 2; i < n; i++) {
+        // Calculate the next Fibonacci number by summing up the last two numbers
+        let nextNum = fibSeries[i - 1] + fibSeries[i - 2];
+        console.log(i);
+        console.log(nextNum);
+        fibSeries.push(nextNum);
+    }
+    return fibSeries;
+}
+console.log(fibonacci(10));
+/////------------------------------------------------------
+////Closures ex: pass arguments to the createHelloWorld function and use those arguments within the returned inner function. This is a common use case for closures
+var createHelloWorld = function (greeting) {
+    return function (name) {
+        return `${greeting}, ${name}!`;
+    };
+};
+const greetWithHello = createHelloWorld("Hello");
+const greetWithHi = createHelloWorld("Hi");
+console.log(greetWithHello("Alice")); // Output: Hello, Alice!
+console.log(greetWithHi("Bob")); // Output: Hi, Bob!
+///----------------------------------------------------------

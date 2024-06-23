@@ -20,14 +20,13 @@ console.log(myname);
 // num = num.toString()
 // console.log(typeof num)
 */
-/* // let age: number = 25;
+// let age: number = 25;
 // let isStudent: boolean = true;
 // let notPresent: null = null;
 // let notDefined: undefined = undefined;
-// let someValue: any = "I can be any type!";
+// let someValue: any = "I can be any type!, Disabled the type checking.";
 // let penta: symbol = Symbol("start");
 // let biggy: bigint = 24n;
-*/
 
 let regexp: RegExp = new RegExp("ab+c");
 
@@ -35,11 +34,21 @@ let fruitsA: string[] = ["apple", "banana", "orange"]; ///litterals
 
 let fruitsB: Array<string> = ["apple", "banana", "orange"];
 
-let numbersA: Array<number> = [1, 2, 3, 4, 5]; ///type annotation/generic
+let numbersA: Array<number> = [1, 2, 3, 4, 5]; ///type annotation
 
 let numbersB: number[] = [1, 2, 3, 4, 5]; ///shorthand for above result
 
 let numbersC: any[] = [1, "2", 3, 4, 5];
+
+let numbersD: Array<number | string | boolean> = [1, "2", 3, 4, true, 5];
+
+let numbersE: (number | string | boolean)[] = [1, "2", 3, 4, true, 5];
+
+let numbersF: number[][] = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [6, 7, 8, 9],
+];
 
 const rbgConfig: Array<Array<number>> = [
   [223, 434, 112],
@@ -63,6 +72,25 @@ let person: Person = {
   age: 25,
   isStudent: true,
 };
+//same as above syntax
+let Person: {
+  name: string;
+  age: number;
+  isStudent: boolean;
+} = {
+  name: "Alice",
+  age: 25,
+  isStudent: true,
+};
+
+function retObj(name: string, age: number) {
+  return {
+    name: name,
+    age: age,
+  };
+}
+const instatnceObj = retObj("John Doe", 30);
+console.log(instatnceObj);
 
 /**first in first out collection (OOP), accepting generic type**/
 class Queue<T> {
@@ -83,9 +111,4 @@ queue.push(2);
 console.log(queue.pop()); // Output: 1
 console.log(queue.pop()); // Output: 2
 console.log(queue.pop()); // Output: undefined (queue is empty)
-
-
-
-
-
-
+console.log(queue);
